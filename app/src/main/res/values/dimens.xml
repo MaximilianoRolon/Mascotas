@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_mascota_height">300dp</dimen>
+    <dimen name="card_mascota_margin_left">15dp</dimen>
+    <dimen name="card_mascota_margin_right">15dp</dimen>
+    <dimen name="card_mascota_margin_bot">10dp</dimen>
+    <dimen name="card_mascota_margin_top">15dp</dimen>
+    <dimen name="image_mascota">290dp</dimen>
+</resources>
