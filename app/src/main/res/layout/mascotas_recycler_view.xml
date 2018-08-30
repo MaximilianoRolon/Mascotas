@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
     android:layout_marginTop="@dimen/card_mascota_margin_top">
 
     <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view"
         android:layout_gravity="center"
@@ -13,7 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/card_mascota_margin_left"
         android:layout_marginRight="@dimen/card_mascota_margin_right"
-        card_view:cardCornerRadius="6dp">
+        card_view:cardUseCompatPadding="true"
+        card_view:cardElevation="4dp"
+        card_view:cardCornerRadius="3dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,22 +27,47 @@
                 android:layout_width="match_parent"
                 android:layout_height="290dp" />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/darker_gray" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
+                <ImageView
+                    android:layout_width="@dimen/bone_width"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/bone"/>
+
                 <TextView
                     android:id="@+id/tv_mascotas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:textSize="@dimen/mascota_name_text_size"
                     />
-                <TextView
-                    android:id="@+id/tv_mascotas_raiting"
-                    android:layout_width="wrap_content"
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="right"/>
+                    android:gravity="right">
+
+                    <TextView
+                        android:id="@+id/tv_mascotas_raiting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:textSize="@dimen/mascota_raiting_text_size"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/bone_width"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/bone"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 

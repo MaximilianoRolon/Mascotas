@@ -6,4 +6,7 @@
     <dimen name="card_mascota_margin_bot">10dp</dimen>
     <dimen name="card_mascota_margin_top">15dp</dimen>
     <dimen name="image_mascota">290dp</dimen>
+    <dimen name="bone_width">45dp</dimen>
+    <dimen name="mascota_name_text_size">25dp</dimen>
+    <dimen name="mascota_raiting_text_size">25dp</dimen>
 </resources>

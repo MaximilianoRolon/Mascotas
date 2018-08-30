@@ -31,11 +31,11 @@ public class MainActivity extends AppCompatActivity {
 
         // set DataSet mascotas
         mascotas = new ArrayList<Mascota>();
-        mascotas.add(new Mascota("Gato", 5, R.drawable.ic_launcher_background));
-        mascotas.add(new Mascota("Perro", 7, R.drawable.ic_launcher_background));
-        mascotas.add(new Mascota("Flamingo", 10, R.drawable.ic_launcher_background));
-        mascotas.add(new Mascota("Hamster", 7,R.drawable.ic_launcher_background));
-        mascotas.add(new Mascota("Mono", 2, R.drawable.ic_launcher_background));
+        mascotas.add(new Mascota("Gato", 5, R.drawable.gato));
+        mascotas.add(new Mascota("Perro", 7, R.drawable.perro));
+        mascotas.add(new Mascota("Flamingo", 10, R.drawable.flamingo));
+        mascotas.add(new Mascota("Hamster", 7,R.drawable.hamster));
+        mascotas.add(new Mascota("Mono", 2, R.drawable.mono));
 
 
         // specify an adapter (see also next example)
