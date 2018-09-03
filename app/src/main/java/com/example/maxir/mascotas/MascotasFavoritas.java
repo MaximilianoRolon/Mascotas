@@ -1,27 +1,31 @@
 package com.example.maxir.mascotas;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.view.ViewManager;
+import android.support.v7.widget.Toolbar;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MascotasFavoritas extends AppCompatActivity {
 
     private ArrayList<Mascota> mascotas;
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
     private RecyclerView.Adapter viewAdapter;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_mascotas_favoritas);
         recyclerView = (RecyclerView) findViewById(R.id.main_recycler_view);
+        toolbar = (Toolbar) findViewById(R.id.action_bar_no_star);
+
+        // Enable go back button in action bar
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // use this setting to improve performance if you know that changes
         // in content do not change the layout size of the RecyclerView
@@ -43,10 +47,5 @@ public class MainActivity extends AppCompatActivity {
         // specify an adapter (see also next example)
         viewAdapter = new MascotasAdapter(mascotas);
         recyclerView.setAdapter(viewAdapter);
-    }
-
-    public void estrella_favoritos_click(View view) {
-        Intent intent = new Intent(this, MascotasFavoritas.class);
-        startActivity(intent);
     }
 }

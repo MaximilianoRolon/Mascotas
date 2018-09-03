@@ -9,4 +9,10 @@
     <dimen name="bone_width">45dp</dimen>
     <dimen name="mascota_name_text_size">25dp</dimen>
     <dimen name="mascota_raiting_text_size">25dp</dimen>
+    <dimen name="elevacion_action_bar">4dp</dimen>
+    <dimen name="star_width">45dp</dimen>
+    <dimen name="star_height">45dp</dimen>
+    <dimen name="go_back_button_width">56dp</dimen>
+    <dimen name="go_back_button_height">56dp</dimen>
+    <dimen name="bone_height">30dp</dimen>
 </resources>

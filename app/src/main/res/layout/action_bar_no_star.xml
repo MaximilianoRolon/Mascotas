@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/colorPrimary"
+    android:elevation="@dimen/elevacion_action_bar"
+    android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/star_width"
+            android:layout_height="@dimen/star_height"
+            android:src="@drawable/paw_print_512"
+            android:scaleType="fitXY"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Mascotas"
+            android:textSize="25dp"
+            android:textColor="#ffff"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+
+        <View
+            android:layout_width="@dimen/star_width"
+            android:layout_height="@dimen/star_height"/>
+
+
+        <ImageView
+            android:layout_width="@dimen/star_width"
+            android:layout_height="@dimen/star_height"
+            android:src="@drawable/ic_more_vert"
+            android:scaleType="fitXY"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.Toolbar>

@@ -39,8 +39,9 @@
 
                 <ImageView
                     android:layout_width="@dimen/bone_width"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/bone"/>
+                    android:layout_height="@dimen/bone_height"
+                    android:layout_gravity="center"
+                    android:src="@drawable/bone1"/>
 
                 <TextView
                     android:id="@+id/tv_mascotas"
@@ -64,7 +65,8 @@
 
                     <ImageView
                         android:layout_width="@dimen/bone_width"
-                        android:layout_height="match_parent"
+                        android:layout_height="@dimen/bone_height"
+                        android:layout_gravity="center"
                         android:src="@drawable/bone"/>
 
                 </LinearLayout>
