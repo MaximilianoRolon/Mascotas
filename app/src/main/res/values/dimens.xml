@@ -15,4 +15,6 @@
     <dimen name="go_back_button_width">56dp</dimen>
     <dimen name="go_back_button_height">56dp</dimen>
     <dimen name="bone_height">30dp</dimen>
+    <dimen name="bio_desarrollador_text_size">20dp</dimen>
+    <dimen name="size_texto_contacto">20sp</dimen>
 </resources>

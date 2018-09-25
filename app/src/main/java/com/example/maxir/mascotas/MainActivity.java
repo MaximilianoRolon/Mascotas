@@ -4,13 +4,19 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewManager;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 
     private ArrayList<Mascota> mascotas;
     private RecyclerView recyclerView;
@@ -45,8 +51,33 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(viewAdapter);
     }
 
+
     public void estrella_favoritos_click(View view) {
         Intent intent = new Intent(this, MascotasFavoritas.class);
         startActivity(intent);
+    }
+
+    public void showMainPopupMenu (View v){
+        PopupMenu popup = new PopupMenu(this, v);
+        popup.setOnMenuItemClickListener(this);
+        MenuInflater inflater = popup.getMenuInflater();
+        inflater.inflate(R.menu.main_popup_menu, popup.getMenu());
+        popup.show();
+    }
+
+    @Override
+    public boolean onMenuItemClick(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.mContacto:
+                Intent intent1 = new Intent(this, ContactoActivity.class);
+                startActivity(intent1);
+                return true;
+            case R.id.mAcercaDe:
+                Intent intent2 = new Intent(this, AcercaDeActivity.class);
+                startActivity(intent2);
+                return true;
+            default:
+                return false;
+        }
     }
 }

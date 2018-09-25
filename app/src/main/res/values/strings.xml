@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Mascotas</string>
+    <string name="menu_option_contacto">Contacto</string>
+    <string name="menu_option_acerca_de">Acerca de</string>
+    <string name="bio_desarrollador_text">Mi nombre es Maxi y soy el desarrollador de esta aplicacion!</string>
+    <string name="texto_contacto">Ingrese sus datos para enviar un comentario a la empresa</string>
+    <string name="hint_contaco_nombre">Nombre</string>
+    <string name="hint_contaco_email">Email</string>
+    <string name="hint_contaco_mensaje">Mensaje</string>
+    <string name="enviar_comentario_button_text">Enviar</string>
 </resources>

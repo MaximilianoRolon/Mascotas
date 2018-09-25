@@ -50,7 +50,8 @@
             android:layout_height="@dimen/star_height"
             android:src="@drawable/ic_more_vert"
             android:scaleType="fitXY"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            android:onClick="showMainPopupMenu"/>
 
     </LinearLayout>
 
