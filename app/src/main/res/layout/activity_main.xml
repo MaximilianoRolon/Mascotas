@@ -7,6 +7,15 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
 
+
+    <!--fragment
+        android:name="com.example.maxir.mascotas.fragments.ReciclerViewFragment"
+        android:id="@+id/recicler_view_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </fragment-->
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
@@ -19,18 +28,31 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <include android:id="@+id/action_bar"
-            layout="@layout/action_bar"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <include
+                    android:id="@+id/action_bar"
+                    layout="@layout/action_bar" />
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/main_recycler_view"
-            android:scrollbars="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/action_bar">
-        </android.support.v7.widget.RecyclerView>
+                <android.support.v4.view.ViewPager
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
 
-    </RelativeLayout>
+                    <android.support.design.widget.TabLayout
+                        app:tabBackground="@color/colorPrimary"
+                        android:id="@+id/tabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top" />
 
+                </android.support.v4.view.ViewPager>
+
+            </LinearLayout>
+
+        </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>

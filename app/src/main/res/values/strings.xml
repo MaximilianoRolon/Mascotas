@@ -8,4 +8,12 @@
     <string name="hint_contaco_email">Email</string>
     <string name="hint_contaco_mensaje">Mensaje</string>
     <string name="enviar_comentario_button_text">Enviar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="recicler_view_fragment_test">Recicler view fragment test</string>
+    <string name="mi_mascota_fragment_test">Mi mascota fragment test</string>
+    <string name="tab_text">tab1</string>
+    <string name="tab_text_2">tab2</string>
+    <string name="mi_flamingo_name">Ricardo</string>
 </resources>

@@ -17,4 +17,9 @@
     <dimen name="bone_height">30dp</dimen>
     <dimen name="bio_desarrollador_text_size">20dp</dimen>
     <dimen name="size_texto_contacto">20sp</dimen>
+    <dimen name="mi_mascota_name_text_size">5dp</dimen>
+    <dimen name="mi_mascota_bone_height">20dp</dimen>
+    <dimen name="mi_mascota_bone_width">30dp</dimen>
+    <dimen name="mi_mascota_raiting_text_size">15dp</dimen>
+    <dimen name="mi_flamingo_name_size">25dp</dimen>
 </resources>
