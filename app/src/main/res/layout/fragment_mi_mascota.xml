@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.MiMascotaFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:src="@drawable/flamingo_color"
+            android:layout_gravity="center"
+            android:layout_width="120dp"
+            android:layout_height="120dp" />
+
+        <TextView
+            android:text="@string/mi_flamingo_name"
+            android:textSize="@dimen/mi_flamingo_name_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
+
+        <View style="@style/dividerHorizontal"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mi_mascota_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+</FrameLayout>
