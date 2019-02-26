@@ -32,16 +32,19 @@
             android:layout_height="10dp" />
 
         <EditText
+            android:id="@+id/contacto_nombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_contaco_nombre"/>
 
         <EditText
+            android:id="@+id/contacto_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_contaco_email"/>
 
         <EditText
+            android:id="@+id/contacto_mensaje"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_contaco_mensaje"
