@@ -82,15 +82,15 @@ public class MiMascotaFragment extends Fragment {
         recyclerView.setHasFixedSize(false);
         // set DataSet mascotas
         mascotas = new ArrayList<Mascota>();
-        mascotas.add(new Mascota("Flamingo", 3, R.drawable.flamingo));
-        mascotas.add(new Mascota("Flamingo", 4, R.drawable.flamingo));
-        mascotas.add(new Mascota("Flamingo", 1, R.drawable.flamingo));
-        mascotas.add(new Mascota("Flamingo", 10, R.drawable.flamingo));
-        mascotas.add(new Mascota("Flamingo", 9, R.drawable.flamingo));
-        mascotas.add(new Mascota("Flamingo", 8, R.drawable.flamingo));
-        mascotas.add(new Mascota("Flamingo", 1, R.drawable.flamingo));
-        mascotas.add(new Mascota("Flamingo", 8, R.drawable.flamingo));
-        mascotas.add(new Mascota("Flamingo", 3, R.drawable.flamingo));
+        mascotas.add(new Mascota(6,"Flamingo", 3, R.drawable.flamingo));
+        mascotas.add(new Mascota(7,"Flamingo", 4, R.drawable.flamingo));
+        mascotas.add(new Mascota(8,"Flamingo", 1, R.drawable.flamingo));
+        mascotas.add(new Mascota(9,"Flamingo", 10, R.drawable.flamingo));
+        mascotas.add(new Mascota(10,"Flamingo", 9, R.drawable.flamingo));
+        mascotas.add(new Mascota(11,"Flamingo", 8, R.drawable.flamingo));
+        mascotas.add(new Mascota(12,"Flamingo", 1, R.drawable.flamingo));
+        mascotas.add(new Mascota(13,"Flamingo", 8, R.drawable.flamingo));
+        mascotas.add(new Mascota(14,"Flamingo", 3, R.drawable.flamingo));
         layoutManager = new GridLayoutManager(getContext(), COLUMNS_NUMBER);
         recyclerView.setLayoutManager(layoutManager);
         viewAdapter = new MiMascotaAdapter(mascotas);

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.WindowDecorActionBar;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -15,6 +16,7 @@ import com.example.maxir.mascotas.R;
 import com.example.maxir.mascotas.adapters.MascotasAdapter;
 import com.example.maxir.mascotas.adapters.ViewPagerAdapter;
 import com.example.maxir.mascotas.pojo.Mascota;
+import com.example.maxir.mascotas.presenter.ReciclerViewPresenter;
 
 import java.util.ArrayList;
 
@@ -32,10 +34,11 @@ public class ReciclerViewFragment extends Fragment {
     RecyclerView.LayoutManager layoutManager;
     RecyclerView.Adapter viewAdapter;
     ArrayList<Mascota> mascotas;
+    ReciclerViewPresenter presenter;
+    Context context;
 
+    public ReciclerViewFragment(){
 
-    public ReciclerViewFragment() {
-        // Required empty public constructor
     }
 
     @Override
@@ -52,6 +55,7 @@ public class ReciclerViewFragment extends Fragment {
      * @return A new instance of fragment ReciclerViewFragment.
      */
     // TODO: Rename and change types and number of parameters
+
     public static ReciclerViewFragment newInstance(String param1, String param2) {
         ReciclerViewFragment fragment = new ReciclerViewFragment();
         Bundle args = new Bundle();
@@ -70,14 +74,20 @@ public class ReciclerViewFragment extends Fragment {
         recyclerView.setHasFixedSize(false);
         layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
-        // set DataSet mascotas
-        mascotas = new ArrayList<Mascota>();
+        presenter = new ReciclerViewPresenter(getContext());
+
+        // set DataSet mascotas MOVER A OBTENCION DE LA DB
+        /*
         mascotas.add(new Mascota("Gato", 5, R.drawable.gato));
         mascotas.add(new Mascota("Perro", 7, R.drawable.perro));
         mascotas.add(new Mascota("Flamingo", 10, R.drawable.flamingo));
         mascotas.add(new Mascota("Hamster", 7,R.drawable.hamster));
         mascotas.add(new Mascota("Mono", 2, R.drawable.mono));
-        viewAdapter = new MascotasAdapter(mascotas);
+        */
+
+        mascotas = presenter.obtenerMascotas();
+        viewAdapter = new MascotasAdapter(mascotas, this.getActivity());
+
         recyclerView.setAdapter(viewAdapter);
         return view;
 

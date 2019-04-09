@@ -1,6 +1,5 @@
 package com.example.maxir.mascotas.activities;
 
-import android.app.ActionBar;
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -9,26 +8,16 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.example.maxir.mascotas.adapters.MascotasAdapter;
 import com.example.maxir.mascotas.R;
 import com.example.maxir.mascotas.adapters.ViewPagerAdapter;
-import com.example.maxir.mascotas.mailer.GMailSender;
+import com.example.maxir.mascotas.database.BaseDeDatos;
 import com.example.maxir.mascotas.pojo.Mascota;
 
 import java.util.ArrayList;
-import java.util.Properties;
-
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
 
 public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 
@@ -39,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
     private ViewPagerAdapter viewPagerAdapter;
     private ViewPager viewPager;
     private TabLayout tabLayout;
+    private BaseDeDatos db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +43,9 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         layoutManager = new LinearLayoutManager(this);
         tabLayout.getTabAt(0).setIcon(R.drawable.ic_home);
         tabLayout.getTabAt(1).setIcon(R.drawable.ic_dog);
+
+        //db = new BaseDeDatos(this);
+        //db.createMascotas();
 
 
     }

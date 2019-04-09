@@ -64,10 +64,13 @@
                         android:textSize="@dimen/mascota_raiting_text_size"/>
 
                     <ImageView
+                        android:id="@+id/likeImg"
                         android:layout_width="@dimen/bone_width"
                         android:layout_height="@dimen/bone_height"
                         android:layout_gravity="center"
-                        android:src="@drawable/bone"/>
+                        android:src="@drawable/bone"
+
+                        />
 
                 </LinearLayout>
 

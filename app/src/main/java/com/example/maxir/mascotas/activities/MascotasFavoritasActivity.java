@@ -41,15 +41,16 @@ public class MascotasFavoritasActivity extends AppCompatActivity {
 
         // set DataSet mascotas
         mascotas = new ArrayList<Mascota>();
-        mascotas.add(new Mascota("Gato", 5, R.drawable.gato));
-        mascotas.add(new Mascota("Perro", 7, R.drawable.perro));
-        mascotas.add(new Mascota("Flamingo", 10, R.drawable.flamingo));
-        mascotas.add(new Mascota("Hamster", 7,R.drawable.hamster));
-        mascotas.add(new Mascota("Mono", 2, R.drawable.mono));
+
+        mascotas.add(new Mascota(15,"Gato", 5, R.drawable.gato));
+        mascotas.add(new Mascota(16,"Perro", 7, R.drawable.perro));
+        mascotas.add(new Mascota(17,"Flamingo", 10, R.drawable.flamingo));
+        mascotas.add(new Mascota(18,"Hamster", 7,R.drawable.hamster));
+        mascotas.add(new Mascota(19,"Mono", 2, R.drawable.mono));
 
 
         // specify an adapter (see also next example)
-        viewAdapter = new MascotasAdapter(mascotas);
+        viewAdapter = new MascotasAdapter(mascotas, this.getParent());
         recyclerView.setAdapter(viewAdapter);
     }
 }

@@ -2,11 +2,13 @@ package com.example.maxir.mascotas.pojo;
 
 public class Mascota{
 
+    private int id;
     private String nombre;
     private int raiting;
     private int foto;
 
-    public Mascota(String nombre, int raiting, int foto){
+    public Mascota(int id, String nombre, int raiting, int foto){
+        this.id = id;
         this.nombre = nombre;
         this.raiting = raiting;
         this.foto = foto;
@@ -36,4 +38,11 @@ public class Mascota{
         return foto;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }
